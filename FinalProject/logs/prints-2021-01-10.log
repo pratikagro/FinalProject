@@ -1,0 +1,7 @@
+02:38:36.151 [main] INFO  greenKart.base.base - search operation 1 of tc12_searchItems is passed
+02:38:36.491 [main] INFO  greenKart.base.base - click operation 1 of tc12_searchItems is passed
+02:38:42.487 [main] INFO  greenKart.base.base - tc13_addToKartItems is passed
+02:38:55.257 [main] INFO  greenKart.base.base - URL is intialised
+02:38:56.138 [main] INFO  greenKart.base.base - search operation 1 of tc12_searchItems is passed
+02:38:56.317 [main] INFO  greenKart.base.base - click operation 1 of tc12_searchItems is passed
+02:39:02.526 [main] INFO  greenKart.base.base - tc13_addToKartItems is passed
