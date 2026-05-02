@@ -30,7 +30,7 @@ public class base {
 	public Properties prop;
 	public int d = 0;
 	public static Logger log = LogManager.getLogger(base.class.getName());
-
+	//This is gitlab test
 	@BeforeClass
 	public void initializeDriver(ITestContext context) {
 		try {
