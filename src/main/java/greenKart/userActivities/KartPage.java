@@ -5,6 +5,7 @@ import static org.testng.Assert.assertThrows;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -25,10 +26,13 @@ public class KartPage {
 		
 	public static boolean clickSearch(WebDriver driver3) throws Exception
 	{
-		
-		ConfigReader.getElement("KartPage_SearchButton", driver3).click();
+		WebElement searchButton = ConfigReader.getElement("KartPage_SearchButton", driver3);
+		try {
+			searchButton.click();
+		} catch (org.openqa.selenium.ElementClickInterceptedException e) {
+			((JavascriptExecutor) driver3).executeScript("arguments[0].click();", searchButton);
+		}
 		return true;
-		
 	}
 	
 	public static boolean addToKart(WebDriver driver3, String kartItem) throws Exception

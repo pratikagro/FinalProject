@@ -1,12 +1,11 @@
 package greenKart.utilties;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -14,21 +13,14 @@ public class ConfigReader {
 public static Properties prop;
 public static WebElement Locator1;
 
-	public static String readProjectConfiguration(String key) 
-	{
-		 
+public static String readProjectConfiguration(String key) {
 		try {
-			
-		prop= new Properties();
-		FileInputStream fis;
-		
-			fis = new FileInputStream(".\\ConfigFiles\\ProjectConfiguration.properties");
+			prop = new Properties();
+			FileInputStream fis = new FileInputStream(Paths.get(System.getProperty("user.dir"), "ConfigFiles", "ProjectConfiguration.properties").toFile());
 			prop.load(fis);
-			String keyValue=prop.getProperty(key);
-			return keyValue;
+			return prop.getProperty(key);
 		} catch (IOException e) {
 			e.printStackTrace();
-			// TODO Auto-generated catch block
 			return null;
 		}
 		
@@ -36,18 +28,12 @@ public static WebElement Locator1;
 		
 	}
 	
-	public static String[] readElementLocator(String key) 
-	{
-		 
+public static String[] readElementLocator(String key) {
 		try {
-			
-		prop= new Properties();
-		FileInputStream fis;
-		
-			fis = new FileInputStream(".\\ConfigFiles\\ElementLocators.properties");
+			prop = new Properties();
+			FileInputStream fis = new FileInputStream(Paths.get(System.getProperty("user.dir"), "ConfigFiles", "ElementLocators.properties").toFile());
 			prop.load(fis);
-			String[] keyValue=prop.getProperty(key).trim().split("-");
-			return keyValue;
+			return prop.getProperty(key).trim().split("-");
 		} catch (IOException e) {
 			e.printStackTrace();
 			return null;

@@ -1,1 +1,3 @@
-02:39:02.526 [main] INFO  greenKart.base.base - tc13_addToKartItems is passed
+15:03:14.082 [main] INFO  greenKart.base.base - ChromeDriver already is initialised
+15:03:14.086 [main] INFO  greenKart.base.base - No need to clean directories
+15:03:14.280 [main] INFO  greenKart.base.base - tc13_addToKartItems is passed

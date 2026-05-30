@@ -1,0 +1,7 @@
+15:03:04.915 [main] INFO  greenKart.base.base - ChromeDriver already is initialised
+15:03:04.918 [main] INFO  greenKart.base.base - No need to clean directories
+15:03:08.132 [main] INFO  greenKart.base.base - URL is intialised
+15:03:08.385 [main] INFO  greenKart.base.base - ChromeDriver already is initialised
+15:03:08.385 [main] INFO  greenKart.base.base - No need to clean directories
+15:03:08.673 [main] INFO  greenKart.base.base - search operation 1 of tc12_searchItems is passed
+15:03:08.872 [main] INFO  greenKart.base.base - click operation 1 of tc12_searchItems is passed
